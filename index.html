@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hills Roof Care — Castle Hill | JSJ Roofing</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -149,63 +152,59 @@
       background-image: url('img-hero.jpg');
       background-size: cover;
       background-position: center 40%;
-      opacity: 0.18;
+      /* P1 #9: lightened from 0.18 to 0.32 so rooflines are visible */
+      opacity: 0.32;
       z-index: 0;
     }
     .hero::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(160deg, rgba(10,31,68,0.85) 0%, rgba(10,31,68,0.7) 60%, rgba(10,31,68,0.55) 100%);
+      /* P1 #9: reduced overlay opacity — was 0.85/0.7/0.55, now 0.65/0.5/0.4 */
+      background: linear-gradient(160deg, rgba(10,31,68,0.65) 0%, rgba(10,31,68,0.5) 60%, rgba(10,31,68,0.4) 100%);
       pointer-events: none;
       z-index: 0;
     }
     .hero .container { position: relative; z-index: 1; }
-    .hero-logo {
-      margin-bottom: 48px;
+
+    /* P0 #4: hero nav bar — logo left, phone right */
+    .hero-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
+    /* P0 #4: logo directly on dark hero — no white card */
     .hero-logo a {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
       text-decoration: none;
     }
-    .hero-logo a:hover { text-decoration: none; opacity: 0.9; }
+    .hero-logo a:hover { opacity: 0.85; text-decoration: none; }
     .hero-logo img {
-      height: 56px;
+      height: 52px;
       width: auto;
-      background: var(--white);
-      border-radius: 6px;
-      padding: 6px 10px;
+      /* White SVG filter so logo reads on dark background */
+      filter: brightness(0) invert(1);
     }
-    .hero-logo-text {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.01em;
-    }
-    .hero-logo-text span { color: var(--green); }
-    /* Google reviews trust item */
-    .trust-item-google {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    /* P1 #8: phone number top-right of hero */
+    .hero-phone {
       font-size: 14px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      padding: 8px 24px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
       white-space: nowrap;
     }
-    .trust-stars {
-      color: #f9ab00;
-      font-size: 15px;
-      letter-spacing: 1px;
-      line-height: 1;
+    .hero-phone a {
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: none;
     }
+    .hero-phone a:hover { text-decoration: underline; }
+
     .hero-content { max-width: 680px; }
     .hero-content .overline { margin-bottom: 16px; }
     .hero-content h1 { color: var(--white); margin-bottom: 20px; }
-    .hero-content .lead { color: rgba(255,255,255,0.8); margin-bottom: 40px; max-width: 560px; }
+    .hero-content .lead { color: rgba(255,255,255,0.85); margin-bottom: 40px; max-width: 560px; }
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
 
     /* ── ============================================================ */
@@ -234,6 +233,21 @@
       color: var(--border-medium);
       font-size: 18px;
       line-height: 1;
+    }
+    /* Google reviews trust item */
+    .trust-item-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 8px 24px;
+      white-space: nowrap;
+    }
+    .trust-stars {
+      color: #f9ab00;
+      letter-spacing: 1px;
     }
 
     /* ── ============================================================ */
@@ -280,7 +294,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      align-items: start;
+      /* P1 #7: align card tops so bottom-aligned CTAs work */
+      align-items: stretch;
     }
     .pricing-card {
       background: var(--white);
@@ -288,6 +303,9 @@
       border-radius: 8px;
       padding: 32px 28px;
       position: relative;
+      /* P1 #7: flexbox so CTA button can be bottom-aligned */
+      display: flex;
+      flex-direction: column;
     }
     .pricing-card--popular {
       border: 2px solid var(--green);
@@ -342,6 +360,8 @@
       margin-bottom: 24px;
     }
     .pricing-features {
+      /* P1 #7: flex-grow pushes CTA to bottom */
+      flex: 1;
       margin-bottom: 28px;
     }
     .pricing-features li {
@@ -361,10 +381,17 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
-    .pricing-card .btn { width: 100%; text-align: center; display: block; }
+    /* P1 #6: all pricing CTAs are filled green — consistent weight */
+    .pricing-card .btn {
+      width: 100%;
+      text-align: center;
+      display: block;
+      /* P1 #7: margin-top: auto pushes to bottom */
+      margin-top: auto;
+    }
 
     /* ── ============================================================ */
-    /* ── SECTION 5: WHY SUBSCRIPTION ────────────────────────────── */
+    /* ── SECTION 5: WHY A SUBSCRIPTION? ────────────────────────── */
     /* ── ============================================================ */
     .why-sub { background: var(--white); border-top: 1px solid var(--border-light); }
     .why-sub-grid {
@@ -390,7 +417,6 @@
       object-position: center;
       display: block;
     }
-    /* Photo caption */
     .photo-pair {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -434,12 +460,14 @@
       border-radius: 8px;
       border: 1px solid var(--border-light);
     }
+    /* P2 #14: tighter "30+" stat box */
     .pillar-icon {
       font-size: 2rem;
       font-weight: 700;
       color: var(--green);
       margin-bottom: 12px;
       line-height: 1;
+      letter-spacing: -0.03em;
     }
     .pillar h4 { color: var(--dark-blue); margin-bottom: 10px; font-size: 16px; }
     .pillar p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
@@ -491,7 +519,6 @@
       background: var(--white);
       min-height: 600px;
     }
-    /* Cal.com inline embed */
     .cal-embed-wrapper iframe,
     .cal-embed-wrapper [data-cal-namespace] {
       width: 100%;
@@ -506,16 +533,14 @@
     .faq .section-header { margin-bottom: 40px; }
     .faq .section-header h2 { color: var(--dark-blue); }
     .faq-list { max-width: 760px; }
-    .faq-item {
+
+    /* P1 #10: semantic <details>/<summary> FAQ — zero JavaScript */
+    .faq-list details {
       border-bottom: 1px solid var(--border-light);
     }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
+    .faq-list details summary {
+      list-style: none;
       padding: 20px 0;
-      font-family: inherit;
       font-size: 16px;
       font-weight: 600;
       color: var(--dark-blue);
@@ -524,10 +549,13 @@
       justify-content: space-between;
       align-items: center;
       gap: 16px;
+      user-select: none;
       transition: color 0.15s;
     }
-    .faq-question:hover { color: var(--blue); }
-    .faq-icon {
+    .faq-list details summary::-webkit-details-marker { display: none; }
+    .faq-list details summary:hover { color: var(--blue); }
+    .faq-list details summary::after {
+      content: '+';
       flex-shrink: 0;
       width: 20px;
       height: 20px;
@@ -540,21 +568,24 @@
       font-weight: 700;
       color: var(--blue);
       transition: background 0.15s, transform 0.2s;
+      text-align: center;
+      line-height: 20px;
     }
-    .faq-item.open .faq-icon {
+    .faq-list details[open] summary::after {
+      content: '×';
       background: var(--green);
       color: var(--dark-blue);
-      transform: rotate(45deg);
+      transform: rotate(0deg);
     }
-    .faq-answer {
-      display: none;
+    .faq-list details[open] summary { color: var(--dark-blue); }
+    .faq-answer-body {
       padding: 0 0 20px;
       font-size: 15px;
       color: var(--text-secondary);
       line-height: 1.7;
       max-width: 680px;
     }
-    .faq-item.open .faq-answer { display: block; }
+    .faq-answer-body a { color: var(--cyan); }
 
     /* ── ============================================================ */
     /* ── SECTION 10: FINAL CTA ───────────────────────────────────── */
@@ -642,6 +673,29 @@
     .booked-box p { color: var(--text-secondary); margin-bottom: 32px; font-size: 15px; line-height: 1.7; }
 
     /* ── ============================================================ */
+    /* ── STRIPE LOADING OVERLAY ──────────────────────────────────── */
+    /* ── ============================================================ */
+    .stripe-loading {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,43,81,0.6);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .stripe-loading.active { display: flex; }
+    .stripe-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(162,195,84,0.3);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── ============================================================ */
     /* ── RESPONSIVE ──────────────────────────────────────────────── */
     /* ── ============================================================ */
     @media (max-width: 900px) {
@@ -661,10 +715,16 @@
       .trust-sep { display: none; }
       .final-cta-actions { flex-direction: column; }
       .booked-box { padding: 32px 20px; }
+      .hero-phone { display: none; }
     }
   </style>
 </head>
 <body>
+
+<!-- Stripe loading overlay -->
+<div class="stripe-loading" id="stripe-loading">
+  <div class="stripe-spinner"></div>
+</div>
 
 <!-- ================================================================ -->
 <!-- SECTION 1: HERO                                                   -->
@@ -672,18 +732,26 @@
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="container">
-    <div class="hero-logo">
-      <a href="https://jsjroofing.com.au" target="_blank" rel="noopener">
-        <img src="logo.svg" alt="JSJ Roofing" />
-      </a>
+    <!-- P0 #4: logo left, phone right — no white card -->
+    <div class="hero-nav">
+      <div class="hero-logo">
+        <a href="https://jsjroofing.com.au" target="_blank" rel="noopener" aria-label="JSJ Roofing homepage">
+          <img src="logo.svg" alt="JSJ Roofing" width="140" height="52" />
+        </a>
+      </div>
+      <!-- P1 #8: phone number top-right -->
+      <div class="hero-phone">
+        Or call <a href="tel:0290904863">(02) 9090 4863</a>
+      </div>
     </div>
     <div class="hero-content">
       <p class="overline">Hills Roof Care</p>
       <h1>Never worry about your gutters again.</h1>
-      <p class="lead">Two professional gutter cleans and a full roof inspection every year — from the Hills District's strata roofing specialists since 1995.</p>
+      <!-- P0 #3: removed "strata" from hero sub-headline -->
+      <p class="lead">Two professional gutter cleans and a full roof inspection every year — from Sydney's roofing specialists since 1995.</p>
       <div class="hero-actions">
-        <a href="https://buy.stripe.com/fZueVf57p6jH2yv2ePdwc0c" class="btn btn-primary" id="cta-monthly-hero">Start my plan — $108/month</a>
-        <a href="https://buy.stripe.com/eVq5kFfM3eQdflhg5Fdwc0d" class="btn-link" id="cta-single-hero">Or book a single gutter clean →</a>
+        <button class="btn btn-primary" onclick="openStripeCheckout('monthly')" id="cta-monthly-hero">Start my plan — $108/month</button>
+        <button class="btn-link" onclick="openStripeCheckout('single')" id="cta-single-hero">Or book a single gutter clean →</button>
       </div>
     </div>
   </div>
@@ -695,7 +763,8 @@
 <section class="trust-strip">
   <div class="container">
     <div class="trust-strip-inner">
-      <span class="trust-item-google"><span class="trust-stars">★★★★★</span> 5.0 Google Reviews</span>
+      <!-- P0 #2: confirmed 5.0 ★ 174 Google reviews -->
+      <span class="trust-item-google"><span class="trust-stars">★★★★★</span> 5.0 · 174 Google reviews</span>
       <span class="trust-sep">·</span>
       <span class="trust-item">30+ years</span>
       <span class="trust-sep">·</span>
@@ -754,14 +823,15 @@
           <span class="currency">$</span>
           <span class="amount">400</span>
         </div>
-        <div class="pricing-freq">One-off</div>
+        <div class="pricing-freq">One-off · inc. GST</div>
         <ul class="pricing-features">
           <li>One professional gutter clean</li>
           <li>Up to a standard 4-bedroom single-storey home</li>
           <li>We arrive when we say we will</li>
           <li>Photos before &amp; after</li>
         </ul>
-        <a href="https://buy.stripe.com/eVq5kFfM3eQdflhg5Fdwc0d" class="btn btn-outline" style="color:var(--dark-blue);border-color:var(--border-medium);" id="cta-single-pricing">Book a single clean</a>
+        <!-- P1 #6: filled green button — same weight as monthly -->
+        <button class="btn btn-primary" onclick="openStripeCheckout('single')" id="cta-single-pricing">Book a single clean</button>
       </div>
 
       <!-- Card 2: Monthly (MOST POPULAR) -->
@@ -772,7 +842,7 @@
           <span class="currency">$</span>
           <span class="amount">108</span>
         </div>
-        <div class="pricing-freq">/month</div>
+        <div class="pricing-freq">/month · inc. GST</div>
         <ul class="pricing-features">
           <li>Two professional gutter cleans every year</li>
           <li>Full roof inspection with photo report each year</li>
@@ -780,23 +850,26 @@
           <li>10% off any repair work we identify</li>
           <li>Cancel anytime after 12 months</li>
         </ul>
-        <a href="https://buy.stripe.com/fZueVf57p6jH2yv2ePdwc0c" class="btn btn-primary" id="cta-monthly-pricing">Start my plan</a>
+        <button class="btn btn-primary" onclick="openStripeCheckout('monthly')" id="cta-monthly-pricing">Start my plan</button>
       </div>
 
       <!-- Card 3: Annual -->
       <div class="pricing-card">
-        <div class="pricing-label">Save $100</div>
+        <!-- P1 #6: "Save $100" badge to match monthly's "Most popular" badge -->
+        <div class="pricing-badge" style="background:var(--dark-blue);color:var(--white);">Save $100</div>
+        <div class="pricing-label">Best value</div>
         <div class="pricing-price">
           <span class="currency">$</span>
           <span class="amount">1,199</span>
         </div>
-        <div class="pricing-freq">/year, paid upfront</div>
+        <div class="pricing-freq">/year, paid upfront · inc. GST</div>
         <ul class="pricing-features">
           <li>Everything in the monthly plan</li>
           <li>One single payment, no monthly admin</li>
           <li>Save $100 compared to monthly</li>
         </ul>
-        <a href="https://buy.stripe.com/7sYcN7gQ7dM92yv6v5dwc0b" class="btn btn-outline" style="color:var(--dark-blue);border-color:var(--border-medium);" id="cta-annual-pricing">Pay annually</a>
+        <!-- P1 #6: filled green button — same weight as monthly -->
+        <button class="btn btn-primary" onclick="openStripeCheckout('annual')" id="cta-annual-pricing">Pay annually &amp; save</button>
       </div>
 
     </div>
@@ -851,7 +924,8 @@
       <div class="pillar">
         <div class="pillar-icon">★ HIA</div>
         <h4>Award-winning workmanship</h4>
-        <p>Recognised by the Housing Industry Association for quality strata roofing.</p>
+        <!-- P0 #3: removed "strata" from pillar copy -->
+        <p>Recognised by the Housing Industry Association for quality residential and commercial roofing.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">#451327C</div>
@@ -874,12 +948,13 @@
   <div class="strata-inner">
     <h3>Is your home strata-titled?</h3>
     <p>Hills Roof Care is designed for single-dwelling homeowners. If you're in a townhouse, villa, or apartment complex managed by a strata committee, this offer isn't quite right for you — but we'd love to talk to your strata manager. JSJ Roofing has been Sydney's strata roofing specialist for 30+ years.</p>
-    <a href="https://jsjroofing.com.au/strata" target="_blank" rel="noopener">For strata managers →</a>
+    <!-- P1 #11: updated to main JSJ site until strata page URL confirmed -->
+    <a href="https://jsjroofing.com.au" target="_blank" rel="noopener">For strata managers →</a>
   </div>
 </section>
 
 <!-- ================================================================ -->
-<!-- SECTION 8: BOOKING EMBED (shown after payment via #booked)        -->
+<!-- SECTION 8: BOOKING CONFIRMATION (shown after Stripe payment)      -->
 <!-- ================================================================ -->
 <section class="booked-section" id="booked">
   <div class="container">
@@ -889,7 +964,6 @@
       <p>We've sent a confirmation to your email with your booking details. Now pick your first Wednesday morning slot below — our crew will text you the morning of the job. Welcome to Hills Roof Care.</p>
     </div>
     <div class="cal-embed-wrapper" style="margin-top:32px;">
-      <!-- Cal.com inline embed — replace USERNAME/EVENT with actual values -->
       <div id="cal-booking-embed" style="min-height:600px;"></div>
     </div>
   </div>
@@ -903,107 +977,78 @@
     <div class="section-header">
       <h2>Questions answered before you ask.</h2>
     </div>
+    <!-- P1 #10: semantic <details>/<summary> — zero JavaScript, accessible -->
     <div class="faq-list">
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What's actually included in each gutter clean?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>What's actually included in each gutter clean?</summary>
+        <div class="faq-answer-body">
           We clear all gutters of leaves, debris and silt by hand, flush downpipes to confirm they're flowing, bag and remove the waste, and send you photos before and after. We don't pressure-wash gutters (it pushes debris into downpipes and can damage older roofing materials).
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What's the roof inspection?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>What's the roof inspection?</summary>
+        <div class="faq-answer-body">
           While we're up there for one of your cleans, we do a full visual inspection: tiles, ridge capping, flashings, valleys, sealant condition, signs of leaks or storm damage. You get a photo report within 24 hours. If we find something, you decide what to do about it — no pressure, and 10% off if you choose us for the repair.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Why a subscription instead of just calling when I need it?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>Why a subscription instead of just calling when I need it?</summary>
+        <div class="faq-answer-body">
           Honestly? Because it stops being your problem. The data on home maintenance is depressing: most people forget about gutters until water's coming down a wall. Two cleans a year on autopilot prevents 90% of avoidable roof damage, and an annual inspection catches the rest before it costs five figures.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Can I cancel?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>Can I cancel?</summary>
+        <div class="faq-answer-body">
           Yes. The monthly plan has a 12-month minimum, then you can cancel anytime through your account. The annual plan is non-refundable after the first service, but it doesn't auto-renew without your say-so. We're not interested in trapping people who don't want to be here.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What if the weather's bad on my booked day?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>What if the weather's bad on my booked day?</summary>
+        <div class="faq-answer-body">
           We'll get in touch the day before to reschedule. Roof work in the rain is dangerous and a waste of everyone's morning. We'll find another Wednesday that suits.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What if I don't need a clean exactly six months in?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>What if I don't need a clean exactly six months in?</summary>
+        <div class="faq-answer-body">
           Push it out. We'll send a reminder, but you choose when. The plan covers two cleans per twelve months — flexible on timing.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What does the $108/month cover, exactly?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>What does the $108/month cover, exactly?</summary>
+        <div class="faq-answer-body">
           Two professional gutter cleans, one annual roof inspection with photo report, priority booking, and 10% off any repair work we identify and you choose to have done by us. It does not cover repairs themselves, replacement of damaged parts, or gutter cleans on a second property.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Is this just for Castle Hill?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>Is this just for Castle Hill?</summary>
+        <div class="faq-answer-body">
           We're starting here. If demand's there, we'll expand to Cherrybrook, Baulkham Hills, Glenhaven and the rest of the Hills District over the next year. Sign up now even if you're outside Castle Hill and we'll be in touch when we're in your suburb.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What's your address and how do I check you're real?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          JSJ Roofing trades as SBMN Operating Pty Ltd, ABN 26 667 426 593. NSW Roofing Licence #451327C — you can verify this at the NSW Fair Trading licence-check website. Offices in Riverstone and Alexandria. Real humans you can call: (02) 9090 4863.
+      <details>
+        <summary>What's your address and how do I check you're real?</summary>
+        <div class="faq-answer-body">
+          JSJ Roofing trades as SBMN Operating Pty Ltd, ABN 26 667 426 593. NSW Roofing Licence #451327C — you can verify this at the NSW Fair Trading licence-check website. Offices in Riverstone and Alexandria. Real humans you can call: <a href="tel:0290904863">(02) 9090 4863</a>.
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          How do I contact you if I have a problem?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
+      <details>
+        <summary>How do I contact you if I have a problem?</summary>
+        <div class="faq-answer-body">
           Email <a href="mailto:info@jsjroofing.com.au">info@jsjroofing.com.au</a> or call <a href="tel:0290904863">(02) 9090 4863</a> during business hours (Mon–Fri 7am–5pm). For urgent issues during a storm, ring the emergency line on the same number — we'll get back to you.
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -1017,8 +1062,8 @@
     <h2>Two cleans. One inspection. Zero chasing trades.</h2>
     <p>Castle Hill homes only. First Wednesday slots available from 24 June 2026.</p>
     <div class="final-cta-actions">
-      <a href="https://buy.stripe.com/fZueVf57p6jH2yv2ePdwc0c" class="btn btn-primary" id="cta-monthly-final">Start my plan — $108/month</a>
-      <a href="https://buy.stripe.com/eVq5kFfM3eQdflhg5Fdwc0d" class="btn-link" id="cta-single-final">Or book a single clean →</a>
+      <button class="btn btn-primary" onclick="openStripeCheckout('monthly')" id="cta-monthly-final">Start my plan — $108/month</button>
+      <button class="btn-link" onclick="openStripeCheckout('single')" id="cta-single-final">Or book a single clean →</button>
     </div>
   </div>
 </section>
@@ -1049,9 +1094,9 @@
     </div>
     <div class="footer-legal">
       © 2026 JSJ Roofing. All rights reserved. ·
-      <a href="/privacy">Privacy</a> ·
-      <a href="/terms">Terms</a> ·
-      <a href="/cancel">Cancellation policy</a> ·
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="cancel.html">Cancellation policy</a> ·
       Hills Roof Care is for single-dwelling homes in serviced suburbs. Pricing in AUD, includes GST. Subject to terms of service.
     </div>
   </div>
@@ -1060,24 +1105,41 @@
 <!-- ================================================================ -->
 <!-- SCRIPTS                                                            -->
 <!-- ================================================================ -->
+
+<!-- P0 #1: Stripe.js for embedded checkout modal -->
+<script src="https://js.stripe.com/v3/"></script>
 <script>
-  /* ── FAQ accordion ─────────────────────────────────────────────── */
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item.open').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  /* ── Stripe configuration ──────────────────────────────────────── */
+  const STRIPE_PK = 'pk_live_51NNvotS44JwkysgbvY0r6n6SkVM8wWzNFIleO5aTCgjFAZL6xbpWBw7Kh6Ub149unTLrpGRsNpgDJxdVDKS25iTQ00y0eJ0mPX';
+  const PRICE_IDS = {
+    monthly: 'price_1TaA2qS44JwkysgbAKS2NUej',
+    annual:  'price_1TaA48S44JwkysgbnzvPf701',
+    single:  'price_1TaA1jS44JwkysgbYmaTsmBg'
+  };
+
+  const stripe = Stripe(STRIPE_PK);
+  const loadingEl = document.getElementById('stripe-loading');
+
+  async function openStripeCheckout(plan) {
+    loadingEl.classList.add('active');
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: PRICE_IDS[plan], quantity: 1 }],
+        mode: plan === 'single' ? 'payment' : 'subscription',
+        successUrl: window.location.origin + window.location.pathname + '#booked',
+        cancelUrl: window.location.href,
       });
-      // Open clicked (if was closed)
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
+      if (error) {
+        console.error('Stripe error:', error);
+        alert('Something went wrong. Please try again or call us on (02) 9090 4863.');
       }
-    });
-  });
+    } catch (e) {
+      console.error(e);
+      alert('Something went wrong. Please try again or call us on (02) 9090 4863.');
+    } finally {
+      loadingEl.classList.remove('active');
+    }
+  }
 
   /* ── #booked anchor — show booking section after Stripe redirect ─ */
   function checkBookedAnchor() {
@@ -1086,6 +1148,7 @@
       if (bookedSection) {
         bookedSection.classList.add('active');
         bookedSection.scrollIntoView({ behavior: 'smooth' });
+        loadCalEmbed();
       }
     }
   }
@@ -1093,7 +1156,10 @@
   window.addEventListener('hashchange', checkBookedAnchor);
 
   /* ── Cal.com embed (loads after #booked is shown) ──────────────── */
+  let calLoaded = false;
   function loadCalEmbed() {
+    if (calLoaded) return;
+    calLoaded = true;
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
       let d = C.document;
@@ -1111,13 +1177,6 @@
       layout: "month_view"
     });
   }
-
-  if (window.location.hash === '#booked') {
-    loadCalEmbed();
-  }
-  window.addEventListener('hashchange', () => {
-    if (window.location.hash === '#booked') loadCalEmbed();
-  });
 </script>
 
 </body>
