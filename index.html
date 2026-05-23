@@ -392,55 +392,205 @@
     }
 
     /* ── ============================================================ */
-    /* ── SECTION 5: WHY A SUBSCRIPTION? ────────────────────────── */
+    /* ── SECTION 5: REVIEWS CAROUSEL ────────────────────────────── */
     /* ── ============================================================ */
-    .why-sub { background: var(--white); border-top: 1px solid var(--border-light); }
-    .why-sub-grid {
+    .reviews-section { background: var(--surface-2); padding: 72px 0 0; }
+    .reviews-header { text-align: center; margin-bottom: 40px; }
+    .reviews-header h2 { color: var(--dark-blue); margin-bottom: 20px; }
+    .reviews-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .reviews-trust-row .trust-stars {
+      font-size: 2rem;
+      color: var(--green);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .reviews-trust-row .trust-count {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+      line-height: 1;
+    }
+    .reviews-trust-row .trust-google-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 5px 12px;
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .reviews-trust-row .trust-google-link:hover { border-color: var(--border-medium); box-shadow: 0 2px 8px rgba(35,31,32,0.08); text-decoration: none; }
+    .reviews-trust-row .trust-google-link .g-logo {
+      width: 16px; height: 16px; flex-shrink: 0;
+    }
+    .reviews-verified {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+    /* Carousel track — two rows on desktop */
+    .carousel-outer {
+      overflow: hidden;
+      position: relative;
+      margin-top: 36px;
+      /* fade edges */
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+    .carousel-rows { display: flex; flex-direction: column; gap: 16px; }
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      will-change: transform;
+    }
+    .carousel-track.paused { animation-play-state: paused !important; }
+    .carousel-track.row-1 { animation: scroll-left 60s linear infinite; }
+    .carousel-track.row-2 { animation: scroll-left 75s linear infinite reverse; }
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    /* Review card */
+    .review-card {
+      width: 320px;
+      flex-shrink: 0;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 20px 22px;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: default;
+    }
+    .review-card:hover { border-color: var(--border-medium); box-shadow: 0 4px 16px rgba(35,31,32,0.08); }
+    .review-card-stars { color: var(--green); font-size: 13px; letter-spacing: 1px; margin-bottom: 8px; }
+    .review-card-headline {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .review-card-quote {
+      font-size: 13px;
+      color: var(--black);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .review-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .review-card-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .review-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .review-card-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      line-height: 1.2;
+    }
+    .review-card-date {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      line-height: 1.2;
+    }
+    .review-card-google {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+    }
+    .review-card-google .g-logo-sm { width: 12px; height: 12px; }
+    /* Why subscribe panel */
+    .why-sub-panel {
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+      padding: 56px 0;
+    }
+    .why-sub-panel-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
-      align-items: center;
+      align-items: start;
     }
-    .why-sub-copy h2 { color: var(--dark-blue); margin-bottom: 24px; }
-    .why-sub-copy p { color: var(--text-secondary); margin-bottom: 16px; font-size: 15px; line-height: 1.7; }
-    .why-sub-copy p:last-child { margin-bottom: 0; }
-    .why-sub-image {
-      border-radius: 8px;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      border: 1px solid var(--border-light);
-      box-shadow: 0 8px 32px rgba(35,31,32,0.12);
-    }
-    .why-sub-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-    .photo-pair {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 0;
-    }
-    .photo-pair-item {
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--border-light);
-    }
-    .photo-pair-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-    .photo-caption {
-      font-size: 11px;
-      color: var(--text-tertiary);
-      padding: 6px 8px;
+    .why-sub-panel-copy h3 { color: var(--dark-blue); font-size: 22px; margin-bottom: 14px; }
+    .why-sub-panel-copy p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+    .why-sub-tiles { display: flex; flex-direction: column; gap: 14px; }
+    .why-sub-tile {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
       background: var(--surface-2);
-      text-align: center;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--green);
+      border-radius: 0 8px 8px 0;
+    }
+    .why-sub-tile-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-sub-tile-icon svg { width: 20px; height: 20px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-sub-tile-body { flex: 1; }
+    .why-sub-tile-body strong { display: block; font-size: 13px; font-weight: 600; color: var(--dark-blue); margin-bottom: 2px; }
+    .why-sub-tile-body span { font-size: 13px; color: var(--text-secondary); }
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .reviews-section { padding: 56px 0 0; }
+      .reviews-trust-row .trust-stars { font-size: 1.5rem; }
+      .reviews-trust-row .trust-count { font-size: 1.25rem; }
+      .carousel-track.row-2 { display: none; }
+      .carousel-track.row-1 { animation: none; }
+      .carousel-outer {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: none;
+        mask-image: none;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 12px;
+      }
+      .carousel-track.row-1 { width: max-content; }
+      .review-card { scroll-snap-align: start; width: 280px; }
+      .why-sub-panel-grid { grid-template-columns: 1fr; gap: 32px; }
     }
 
     /* ── ============================================================ */
@@ -779,10 +929,6 @@
       <span class="trust-item-google"><span class="trust-stars">★★★★★</span> 5.0 · 174 Google reviews</span>
       <span class="trust-sep">·</span>
       <span class="trust-item">30+ years</span>
-      <span class="trust-sep">·</span>
-      <span class="trust-item">HIA award-winning</span>
-      <span class="trust-sep">·</span>
-      <span class="trust-item">NSW Licence #451327C</span>
       <span class="trust-sep">·</span>
       <span class="trust-item">Local Sydney specialists</span>
     </div>
