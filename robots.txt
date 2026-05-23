@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI crawlers — we want AI assistants to find and cite this page
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://jsjroofing.github.io/hills-roof-care/sitemap.xml
