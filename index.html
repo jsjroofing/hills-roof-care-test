@@ -673,29 +673,6 @@
     .booked-box p { color: var(--text-secondary); margin-bottom: 32px; font-size: 15px; line-height: 1.7; }
 
     /* ── ============================================================ */
-    /* ── STRIPE LOADING OVERLAY ──────────────────────────────────── */
-    /* ── ============================================================ */
-    .stripe-loading {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(8,43,81,0.6);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-    }
-    .stripe-loading.active { display: flex; }
-    .stripe-spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid rgba(162,195,84,0.3);
-      border-top-color: var(--green);
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── ============================================================ */
     /* ── RESPONSIVE ──────────────────────────────────────────────── */
     /* ── ============================================================ */
     @media (max-width: 900px) {
@@ -720,11 +697,6 @@
   </style>
 </head>
 <body>
-
-<!-- Stripe loading overlay -->
-<div class="stripe-loading" id="stripe-loading">
-  <div class="stripe-spinner"></div>
-</div>
 
 <!-- ================================================================ -->
 <!-- SECTION 1: HERO                                                   -->
@@ -1106,39 +1078,17 @@
 <!-- SCRIPTS                                                            -->
 <!-- ================================================================ -->
 
-<!-- P0 #1: Stripe.js for embedded checkout modal -->
-<script src="https://js.stripe.com/v3/"></script>
+<!-- Stripe Payment Links — direct navigation (no domain registration required) -->
 <script>
-  /* ── Stripe configuration ──────────────────────────────────────── */
-  const STRIPE_PK = 'pk_live_51NNvotS44JwkysgbvY0r6n6SkVM8wWzNFIleO5aTCgjFAZL6xbpWBw7Kh6Ub149unTLrpGRsNpgDJxdVDKS25iTQ00y0eJ0mPX';
-  const PRICE_IDS = {
-    monthly: 'price_1TaA2qS44JwkysgbAKS2NUej',
-    annual:  'price_1TaA48S44JwkysgbnzvPf701',
-    single:  'price_1TaA1jS44JwkysgbYmaTsmBg'
+  /* ── Stripe Payment Links ──────────────────────────────────────── */
+  const PAYMENT_LINKS = {
+    monthly: 'https://buy.stripe.com/fZueVf57p6jH2yv2ePdwc0c',
+    annual:  'https://buy.stripe.com/7sYcN7gQ7dM92yv6v5dwc0b',
+    single:  'https://buy.stripe.com/eVq5kFfM3eQdflhg5Fdwc0d'
   };
 
-  const stripe = Stripe(STRIPE_PK);
-  const loadingEl = document.getElementById('stripe-loading');
-
-  async function openStripeCheckout(plan) {
-    loadingEl.classList.add('active');
-    try {
-      const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: PRICE_IDS[plan], quantity: 1 }],
-        mode: plan === 'single' ? 'payment' : 'subscription',
-        successUrl: window.location.origin + window.location.pathname + '#booked',
-        cancelUrl: window.location.href,
-      });
-      if (error) {
-        console.error('Stripe error:', error);
-        alert('Something went wrong. Please try again or call us on (02) 9090 4863.');
-      }
-    } catch (e) {
-      console.error(e);
-      alert('Something went wrong. Please try again or call us on (02) 9090 4863.');
-    } finally {
-      loadingEl.classList.remove('active');
-    }
+  function openStripeCheckout(plan) {
+    window.location.href = PAYMENT_LINKS[plan];
   }
 
   /* ── #booked anchor — show booking section after Stripe redirect ─ */
