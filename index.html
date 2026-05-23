@@ -474,6 +474,45 @@
     .pillar p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
 
     /* ── ============================================================ */
+    /* ── SECTION 6b: OUR GUARANTEE ──────────────────────────────── */
+    /* ── ============================================================ */
+    .guarantee-section {
+      background: var(--dark-blue);
+      padding: 64px 0;
+      color: var(--white);
+    }
+    .guarantee-section .section-header h2 { color: var(--white); }
+    .guarantee-section .section-header p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto; }
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .guarantee-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    .guarantee-card .g-icon {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .guarantee-card h4 { color: var(--white); font-size: 15px; margin-bottom: 8px; }
+    .guarantee-card p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; margin: 0; }
+    .guarantee-footnote {
+      margin-top: 32px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+    .guarantee-footnote a { color: var(--green); text-decoration: underline; }
+    @media (max-width: 768px) { .guarantee-grid { grid-template-columns: 1fr; } }
+
+    /* ── ============================================================ */
     /* ── SECTION 7: STRATA REDIRECT ──────────────────────────────── */
     /* ── ============================================================ */
     .strata-banner {
@@ -906,6 +945,36 @@
         <p>Recognised by the Housing Industry Association for quality residential and commercial roofing.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- SECTION 6b: OUR GUARANTEE                                         -->
+<!-- ================================================================ -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;margin-bottom:0;">
+      <h2>Our guarantee</h2>
+      <p>We back our work. If something isn't right, we'll fix it.</p>
+    </div>
+    <div class="guarantee-grid">
+      <div class="guarantee-card">
+        <div class="g-icon">2yr</div>
+        <h4>2-year workmanship warranty</h4>
+        <p>All gutter cleaning and non-structural repair work is covered for 2 years from the date of service. If a defect in our workmanship appears, we'll return and fix it at no charge.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="g-icon">✗</div>
+        <h4>What's not covered</h4>
+        <p>Storm or hail damage, natural wear and tear, and damage caused by other trades on the roof after our visit are excluded. Full exclusions in our warranty terms.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="g-icon">✉</div>
+        <h4>Easy claims process</h4>
+        <p>Email <a href="mailto:info@jsjroofing.com.au" style="color:var(--green);">info@jsjroofing.com.au</a> with subject "Warranty Claim" and your original invoice. We'll inspect and advise if the claim is valid.</p>
+      </div>
+    </div>
+    <p class="guarantee-footnote">Full warranty terms, including manufacturer warranties for Wakaflex®, Aqua Flash®, COLORBOND® and ZINCALUME®: <a href="warranty.html">read our Warranty Terms →</a></p>
   </div>
 </section>
 
