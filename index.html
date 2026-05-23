@@ -154,10 +154,16 @@
     .hero-logo {
       margin-bottom: 48px;
     }
+    .hero-logo a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .hero-logo a:hover { text-decoration: none; opacity: 0.9; }
     .hero-logo img {
-      height: 48px;
+      height: 40px;
       width: auto;
-      min-width: 120px;
     }
     .hero-logo-text {
       font-size: 22px;
@@ -166,6 +172,23 @@
       letter-spacing: -0.01em;
     }
     .hero-logo-text span { color: var(--green); }
+    /* Google reviews trust item */
+    .trust-item-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 8px 24px;
+      white-space: nowrap;
+    }
+    .trust-stars {
+      color: #f9ab00;
+      font-size: 15px;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
     .hero-content { max-width: 680px; }
     .hero-content .overline { margin-bottom: 16px; }
     .hero-content h1 { color: var(--white); margin-bottom: 20px; }
@@ -622,8 +645,10 @@
 <section class="hero" id="top">
   <div class="container">
     <div class="hero-logo">
-      <!-- Logo: replace src with actual SVG path when available -->
-      <div class="hero-logo-text">JSJ <span>Roofing</span></div>
+      <a href="https://jsjroofing.com.au" target="_blank" rel="noopener">
+        <!-- If you have a logo SVG/PNG, replace the div below with: <img src="/logo.svg" alt="JSJ Roofing" /> -->
+        <div class="hero-logo-text">JSJ <span>Roofing</span></div>
+      </a>
     </div>
     <div class="hero-content">
       <p class="overline">Hills Roof Care</p>
@@ -643,6 +668,8 @@
 <section class="trust-strip">
   <div class="container">
     <div class="trust-strip-inner">
+      <span class="trust-item-google"><span class="trust-stars">★★★★★</span> 5.0 Google Reviews</span>
+      <span class="trust-sep">·</span>
       <span class="trust-item">30+ years</span>
       <span class="trust-sep">·</span>
       <span class="trust-item">HIA award-winning</span>
