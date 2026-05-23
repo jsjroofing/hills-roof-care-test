@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Primary SEO -->
-  <title>Hills Roof Care — Castle Hill gutter cleaning &amp; roof inspection subscription | JSJ Roofing</title>
+  <title>[TEST] Hills Roof Care — Castle Hill gutter cleaning &amp; roof inspection subscription | JSJ Roofing</title>
   <meta name="description" content="Castle Hill homeowners: two professional gutter cleans plus an annual roof inspection — from $108/month. Licensed Sydney roofers, 5.0★ on Google across 174 reviews, 30+ years in business. NSW Licence #451327C.">
   <meta name="keywords" content="gutter cleaning Castle Hill, roof inspection Castle Hill, JSJ Roofing, Hills District roofer, roof maintenance subscription Sydney, gutter cleaning subscription">
   <meta name="author" content="JSJ Roofing (SBMN Operating Pty Ltd)">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://jsjroofing.github.io/hills-roof-care/">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://jsjroofing.github.io/hills-roof-care-test/">
 
   <!-- Open Graph (Facebook, LinkedIn, WhatsApp previews) -->
   <meta property="og:type" content="website">
@@ -1156,6 +1156,13 @@
 <body>
 
 <!-- ================================================================ -->
+<!-- TEST ENVIRONMENT BANNER — remove before any production use       -->
+<!-- ================================================================ -->
+<div style="background:#a2c354;color:#082b51;text-align:center;padding:10px 16px;font-weight:700;font-family:Inter,sans-serif;font-size:14px;letter-spacing:0.02em;position:sticky;top:0;z-index:9999;border-bottom:2px solid #82a33a;">
+  ⚠️ TEST ENVIRONMENT — Not for customers. Real money will not move. Use Stripe test cards only.
+</div>
+
+<!-- ================================================================ -->
 <!-- SECTION 1: HERO                                                   -->
 <!-- ================================================================ -->
 <section class="hero" id="top">
@@ -1992,10 +1999,11 @@
 <!-- Stripe Payment Links — direct navigation (no domain registration required) -->
 <script>
   /* ── Stripe Payment Links ────────────────────────────────────────────────── */
+  /* !! TEST ENVIRONMENT — test Stripe Payment Links only. DO NOT merge to main. !! */
   const PAYMENT_LINKS = {
-    monthly: 'https://buy.stripe.com/fZueVf57p6jH2yv2ePdwc0c',
-    annual: 'https://buy.stripe.com/cNi8wRfM3dM91urg5Fdwc0e',
-    single:  'https://buy.stripe.com/fZufZjarJcI5dd9bPpdwc0f'
+    monthly: 'https://buy.stripe.com/test_bJe9AV7fxbE1b51bPpdwc06',
+    annual:  'https://buy.stripe.com/test_8x228t2Zh0Zn4GD7z9dwc05',
+    single:  'https://buy.stripe.com/test_cNieVfgQ70Zn5KH2ePdwc03'
   };
 
   function openStripeCheckout(plan) {
@@ -2154,13 +2162,13 @@
       let d = C.document;
       C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); };
     })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "hills-roof-care-first-clean-inspection", { origin: "https://app.cal.com" });
+    Cal("init", "hillsroofcaretest", { origin: "https://app.cal.com" });
     Cal("inline", {
       elementOrSelector: "#cal-booking-embed",
-      calLink: "team/jsj-roofing/hills-roof-care-first-clean-inspection",
+      calLink: "team/jsj-roofing/hillsroofcaretest",
       layout: "month_view"
     });
-    Cal("ui", "hills-roof-care-first-clean-inspection", {
+    Cal("ui", "hillsroofcaretest", {
       styles: { branding: { brandColor: "#a2c354" } },
       hideEventTypeDetails: false,
       layout: "month_view"
