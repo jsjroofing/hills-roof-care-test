@@ -2145,7 +2145,11 @@
       if (bookedSection) {
         bookedSection.classList.add('active');
         bookedSection.scrollIntoView({ behavior: 'smooth' });
-        loadCalEmbed();
+        // Delay Cal.com init until after the browser has painted the visible section
+        // (Cal.com embed fails silently if the target div has display:none or zero dimensions)
+        requestAnimationFrame(function() {
+          setTimeout(loadCalEmbed, 300);
+        });
       }
     }
   }
