@@ -1035,35 +1035,351 @@
 </section>
 
 <!-- ================================================================ -->
-<!-- SECTION 5: WHY A SUBSCRIPTION?                                    -->
+<!-- SECTION 5: REVIEWS CAROUSEL                                        -->
+<!-- Last verified: 23 May 2026 — 5.0 ★ · 174 Google reviews           -->
 <!-- ================================================================ -->
-<section class="why-sub section">
+<section class="reviews-section">
   <div class="container">
-    <div class="why-sub-grid">
-      <div class="why-sub-copy">
-        <h2>The cost of waiting is what we're really fixing.</h2>
-        <p>Blocked gutters don't announce themselves. They cause leaks during the next big storm, rot fascia boards in slow motion, and ruin paintwork from the inside out. By the time you notice, the repair bill is in the thousands.</p>
-        <p>A subscription means it's our job to remember — not yours. Two cleans a year keeps the water moving where it should. The annual inspection catches the small things before they become the expensive things.</p>
-        <p>We've been on Hills District roofs since 1995. We know what to look for, what to leave alone, and how to write a report a non-expert can actually understand.</p>
+    <div class="reviews-header">
+      <h2>Why Sydney homeowners choose JSJ</h2>
+      <div class="reviews-trust-row">
+        <span class="trust-stars" aria-label="5 stars">★★★★★</span>
+        <span class="trust-count">5.0</span>
+        <span style="font-size:1.1rem;color:var(--text-secondary);font-weight:400;">·</span>
+        <span class="trust-count">174 Google reviews</span>
+        <a href="https://www.google.com/search?q=jsj+roofing+alexandria#" target="_blank" rel="noopener" class="trust-google-link" aria-label="Read JSJ Roofing reviews on Google">
+          <!-- Google G logo -->
+          <svg class="g-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Read our reviews
+        </a>
       </div>
-      <div>
-        <div class="why-sub-image">
-          <img src="img-gutter-problem.jpg" alt="Overflowing gutter causing water damage — the kind of problem Hills Roof Care prevents" loading="lazy" />
-        </div>
-        <div class="photo-pair" style="margin-top:12px">
-          <div class="photo-pair-item">
-            <img src="img-cracked-tile.jpg" alt="Cracked roof tiles — caught early in a JSJ inspection" loading="lazy" />
-            <p class="photo-caption">Cracked tiles — caught in inspection</p>
+      <p class="reviews-verified">Real reviews from real Sydney homes — verified on Google.</p>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel-outer" id="reviews-carousel" aria-label="Customer reviews carousel" role="region">
+    <div class="carousel-rows" id="carousel-rows">
+
+      <!-- ROW 1: cards 1–6 duplicated for seamless loop -->
+      <div class="carousel-track row-1" id="row1" aria-live="off">
+
+        <!-- Card 1 -->
+        <article class="review-card" aria-label="Review by Kathryn V.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;They took their shoes off before coming in&rdquo;</p>
+          <p class="review-card-quote">Daniel and Kade just attended my property. Super polite, super friendly and respectful — took shoes off before coming in. Fixed my leaking roof, talked me through the issue and the fix.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#4a7c3f;" aria-hidden="true">KV</div>
+              <div><div class="review-card-name">Kathryn V.</div><div class="review-card-date">9 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
           </div>
-          <div class="photo-pair-item">
-            <img src="img-inspection-report.jpg" alt="JSJ Roofing inspection report" loading="lazy" />
-            <p class="photo-caption">Your photo report, delivered within 24hrs</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="review-card" aria-label="Review by Clare H.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;They solved the mystery&rdquo;</p>
+          <p class="review-card-quote">For about six weeks there was a dull thudding above my ceiling. Two sharp-eyed, brilliant young blokes came and solved the mystery — a corroded satellite dish support catching in the breeze. They pinned it down AND cured a persistent leak that was damaging the ceiling.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#082b51;" aria-hidden="true">CH</div>
+              <div><div class="review-card-name">Clare H.</div><div class="review-card-date">1 year ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="review-card" aria-label="Review by Larissa R.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Photos during inspection and after&rdquo;</p>
+          <p class="review-card-quote">Kade and Adam did an amazing job fixing a hole on our terrace roof which caused a big leak in our bathroom. They took photos during the initial inspection and after the work.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#7b5ea7;" aria-hidden="true">LR</div>
+              <div><div class="review-card-name">Larissa R.</div><div class="review-card-date">6 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="review-card" aria-label="Review by Anita T.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Volunteered to remove their shoes&rdquo;</p>
+          <p class="review-card-quote">James and Jayden were fantastic. They identified the cause of the leak, provided good feedback and details with photos on how they fixed it. They were very respectful of my home — volunteered to remove their shoes which I fully appreciated.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#c0622a;" aria-hidden="true">AT</div>
+              <div><div class="review-card-name">Anita T.</div><div class="review-card-date">10 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="review-card" aria-label="Review by Amanda B.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Used them twice — both times impressed&rdquo;</p>
+          <p class="review-card-quote">Adam and James were amazing. Punctual, polite, completed the job to a very high standard and great to work with. I've used them twice and both times I've been so impressed.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#2a7a6e;" aria-hidden="true">AB</div>
+              <div><div class="review-card-name">Amanda B.</div><div class="review-card-date">9 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="review-card" aria-label="Review by Patrick O.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Clearly explained the issue and the fix&rdquo;</p>
+          <p class="review-card-quote">Daniel and Liam came out to fix a leaking skylight. They were on time, worked quickly and thoroughly, and clearly explained both the issue and the solution.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#1a5276;" aria-hidden="true">PO</div>
+              <div><div class="review-card-name">Patrick O.</div><div class="review-card-date">10 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate cards 1–6 for seamless loop -->
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;They took their shoes off before coming in&rdquo;</p>
+          <p class="review-card-quote">Daniel and Kade just attended my property. Super polite, super friendly and respectful — took shoes off before coming in. Fixed my leaking roof, talked me through the issue and the fix.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#4a7c3f;">KV</div><div><div class="review-card-name">Kathryn V.</div><div class="review-card-date">9 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;They solved the mystery&rdquo;</p>
+          <p class="review-card-quote">For about six weeks there was a dull thudding above my ceiling. Two sharp-eyed, brilliant young blokes came and solved the mystery — a corroded satellite dish support catching in the breeze. They pinned it down AND cured a persistent leak that was damaging the ceiling.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#082b51;">CH</div><div><div class="review-card-name">Clare H.</div><div class="review-card-date">1 year ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Photos during inspection and after&rdquo;</p>
+          <p class="review-card-quote">Kade and Adam did an amazing job fixing a hole on our terrace roof which caused a big leak in our bathroom. They took photos during the initial inspection and after the work.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#7b5ea7;">LR</div><div><div class="review-card-name">Larissa R.</div><div class="review-card-date">6 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Volunteered to remove their shoes&rdquo;</p>
+          <p class="review-card-quote">James and Jayden were fantastic. They identified the cause of the leak, provided good feedback and details with photos on how they fixed it. They were very respectful of my home — volunteered to remove their shoes which I fully appreciated.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#c0622a;">AT</div><div><div class="review-card-name">Anita T.</div><div class="review-card-date">10 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Used them twice — both times impressed&rdquo;</p>
+          <p class="review-card-quote">Adam and James were amazing. Punctual, polite, completed the job to a very high standard and great to work with. I've used them twice and both times I've been so impressed.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#2a7a6e;">AB</div><div><div class="review-card-name">Amanda B.</div><div class="review-card-date">9 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+        <article class="review-card" aria-hidden="true">
+          <div class="review-card-stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Clearly explained the issue and the fix&rdquo;</p>
+          <p class="review-card-quote">Daniel and Liam came out to fix a leaking skylight. They were on time, worked quickly and thoroughly, and clearly explained both the issue and the solution.</p>
+          <div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#1a5276;">PO</div><div><div class="review-card-name">Patrick O.</div><div class="review-card-date">10 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div>
+        </article>
+
+      </div><!-- /row-1 -->
+
+      <!-- ROW 2: cards 7–12 duplicated for seamless loop -->
+      <div class="carousel-track row-2" id="row2" aria-live="off">
+
+        <!-- Card 7 -->
+        <article class="review-card" aria-label="Review by Sean S.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Cleaned up another tradie's mess&rdquo;</p>
+          <p class="review-card-quote">Liam and Brad just left. Really nice guys, fast but quality work and very professional. They went above-and-beyond and cleaned some mess that a totally different team of tradies left from the week prior.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#5d4037;" aria-hidden="true">SS</div>
+              <div><div class="review-card-name">Sean S.</div><div class="review-card-date">10 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="review-card" aria-label="Review by Victor L.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Said he'd be back — and was, an hour later&rdquo;</p>
+          <p class="review-card-quote">Got in on a day that was hammering down. Daniel said he'd be back when it's better, and lo and behold, 1hr later he's back and on the roof patching our roof. Top notch work.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#0654a6;" aria-hidden="true">VL</div>
+              <div><div class="review-card-name">Victor L.</div><div class="review-card-date">1 year ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="review-card" aria-label="Review by Paul B.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Communicated exactly what they were doing&rdquo;</p>
+          <p class="review-card-quote">Adam and Jayden were incredibly professional and communicated exactly what they were doing. Would highly recommend.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#2e7d32;" aria-hidden="true">PB</div>
+              <div><div class="review-card-name">Paul B.</div><div class="review-card-date">9 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="review-card" aria-label="Review by Thompson J.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Highly recommend to anyone needing reliable roofing&rdquo;</p>
+          <p class="review-card-quote">Professional, punctual, and very knowledgeable. They explained everything clearly and completed the job on time with great attention to detail. The quality of their work is outstanding.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#6a1b9a;" aria-hidden="true">TJ</div>
+              <div><div class="review-card-name">Thompson J.</div><div class="review-card-date">4 weeks ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="review-card" aria-label="Review by Aleksandar P.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;Left the villa clean after completion&rdquo;</p>
+          <p class="review-card-quote">Adam and Billy are very professional and polite. Left the villa clean after completion of work. They explained what they had to do to fix the roof.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#37474f;" aria-hidden="true">AP</div>
+              <div><div class="review-card-name">Aleksandar P.</div><div class="review-card-date">9 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="review-card" aria-label="Review by Joseph P.">
+          <div class="review-card-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-card-headline">&ldquo;True professionals who take pride in their craftsmanship&rdquo;</p>
+          <p class="review-card-quote">Aziz and his team were outstanding. The job was far from standard — an unusual shape and tricky layout that required careful problem-solving and attention to detail. From the first point of contact, communication was excellent.</p>
+          <div class="review-card-footer">
+            <div class="review-card-author">
+              <div class="review-avatar" style="background:#bf360c;" aria-hidden="true">JP</div>
+              <div><div class="review-card-name">Joseph P.</div><div class="review-card-date">11 months ago</div></div>
+            </div>
+            <div class="review-card-google" aria-label="Google review">
+              <svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              Google review
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate cards 7–12 for seamless loop -->
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;Cleaned up another tradie's mess&rdquo;</p><p class="review-card-quote">Liam and Brad just left. Really nice guys, fast but quality work and very professional. They went above-and-beyond and cleaned some mess that a totally different team of tradies left from the week prior.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#5d4037;">SS</div><div><div class="review-card-name">Sean S.</div><div class="review-card-date">10 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;Said he'd be back — and was, an hour later&rdquo;</p><p class="review-card-quote">Got in on a day that was hammering down. Daniel said he'd be back when it's better, and lo and behold, 1hr later he's back and on the roof patching our roof. Top notch work.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#0654a6;">VL</div><div><div class="review-card-name">Victor L.</div><div class="review-card-date">1 year ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;Communicated exactly what they were doing&rdquo;</p><p class="review-card-quote">Adam and Jayden were incredibly professional and communicated exactly what they were doing. Would highly recommend.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#2e7d32;">PB</div><div><div class="review-card-name">Paul B.</div><div class="review-card-date">9 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;Highly recommend to anyone needing reliable roofing&rdquo;</p><p class="review-card-quote">Professional, punctual, and very knowledgeable. They explained everything clearly and completed the job on time with great attention to detail. The quality of their work is outstanding.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#6a1b9a;">TJ</div><div><div class="review-card-name">Thompson J.</div><div class="review-card-date">4 weeks ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;Left the villa clean after completion&rdquo;</p><p class="review-card-quote">Adam and Billy are very professional and polite. Left the villa clean after completion of work. They explained what they had to do to fix the roof.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#37474f;">AP</div><div><div class="review-card-name">Aleksandar P.</div><div class="review-card-date">9 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card-stars">★★★★★</div><p class="review-card-headline">&ldquo;True professionals who take pride in their craftsmanship&rdquo;</p><p class="review-card-quote">Aziz and his team were outstanding. The job was far from standard — an unusual shape and tricky layout that required careful problem-solving and attention to detail. From the first point of contact, communication was excellent.</p><div class="review-card-footer"><div class="review-card-author"><div class="review-avatar" style="background:#bf360c;">JP</div><div><div class="review-card-name">Joseph P.</div><div class="review-card-date">11 months ago</div></div></div><div class="review-card-google"><svg class="g-logo-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Google review</div></div></article>
+
+      </div><!-- /row-2 -->
+
+    </div><!-- /carousel-rows -->
+  </div><!-- /carousel-outer -->
+
+  <!-- Why subscribe panel -->
+  <div class="why-sub-panel">
+    <div class="container">
+      <div class="why-sub-panel-grid">
+        <div class="why-sub-panel-copy">
+          <h3>Why a subscription?</h3>
+          <p>Blocked gutters cause leaks, rotting fascia, and ruined paintwork before you ever notice. Two cleans a year keeps the water moving. One inspection catches the small stuff before it becomes the expensive stuff. We remember so you don't have to.</p>
+        </div>
+        <div class="why-sub-tiles">
+          <div class="why-sub-tile">
+            <div class="why-sub-tile-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6 2 2 9 2 14a10 10 0 0 0 20 0c0-5-4-12-10-12z"/></svg>
+            </div>
+            <div class="why-sub-tile-body"><strong>Prevent damage</strong><span>Two professional cleans a year</span></div>
+          </div>
+          <div class="why-sub-tile">
+            <div class="why-sub-tile-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="why-sub-tile-body"><strong>Catch problems early</strong><span>Annual roof inspection with photo report</span></div>
+          </div>
+          <div class="why-sub-tile">
+            <div class="why-sub-tile-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="why-sub-tile-body"><strong>Never think about it</strong><span>We remind you when it's due</span></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+
+</section><!-- /reviews-section -->
+
+<!-- Pause carousel on hover -->
+<script>
+  (function() {
+    var outer = document.getElementById('reviews-carousel');
+    var tracks = document.querySelectorAll('.carousel-track');
+    if (!outer) return;
+    outer.addEventListener('mouseenter', function() {
+      tracks.forEach(function(t) { t.classList.add('paused'); });
+    });
+    outer.addEventListener('mouseleave', function() {
+      tracks.forEach(function(t) { t.classList.remove('paused'); });
+    });
+    /* Keyboard nav: left/right arrows scroll row-1 on desktop */
+    outer.setAttribute('tabindex', '0');
+    outer.addEventListener('keydown', function(e) {
+      var row = document.getElementById('row1');
+      if (!row) return;
+      if (e.key === 'ArrowRight') { row.scrollLeft += 340; e.preventDefault(); }
+      if (e.key === 'ArrowLeft')  { row.scrollLeft -= 340; e.preventDefault(); }
+    });
+  })();
+</script>
 
 <!-- ================================================================ -->
 <!-- SECTION 6: TRUST BLOCK                                            -->
