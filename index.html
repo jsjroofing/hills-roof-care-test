@@ -1023,6 +1023,11 @@
     .sticky-cta-label strong { color: var(--white); display: block; font-size: 15px; }
     .sticky-cta-bar .btn { white-space: nowrap; flex-shrink: 0; padding: 12px 24px; font-size: 15px; }
     /* Desktop: sticky top bar instead */
+    /* Mobile: add bottom padding so sticky CTA bar never overlaps interactive elements */
+    @media (max-width: 768px) {
+      body { padding-bottom: 80px; }
+    }
+
     @media (min-width: 769px) {
       .sticky-cta-bar {
         top: 0; bottom: auto;
@@ -1118,6 +1123,9 @@
     .modal-confirm-plan .plan-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); margin-bottom: 4px; }
     .modal-confirm-plan .plan-price { font-size: 1.5rem; font-weight: 700; color: var(--dark-blue); }
     .modal-confirm-plan .plan-freq { font-size: 13px; color: var(--text-secondary); }
+    .modal-post-payment { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; padding: 12px 14px; background: #f0f7e8; border-left: 3px solid var(--green); border-radius: 0 6px 6px 0; }
+    .modal-email-exit { font-size: 12px; color: var(--text-secondary); text-align: center; margin-top: 16px; }
+    .modal-email-exit a { color: var(--blue); text-decoration: underline; }
 
     /* ── ============================================================ */
     /* ── RESPONSIVE ──────────────────────────────────────────── */
@@ -1169,7 +1177,7 @@
       <p class="overline">Hills Roof Care</p>
       <h1>Never worry about your gutters again.</h1>
       <!-- P0 #3: removed "strata" from hero sub-headline -->
-      <p class="lead">Two professional gutter cleans and a full roof inspection every year — from Sydney's roofing specialists, now servicing Castle Hill.</p>
+      <p class="lead">Castle Hill roof care, handled twice a year. Two professional gutter cleans plus an annual roof inspection — from Sydney's specialists since 1995.</p>
       <div class="hero-actions">
         <button class="btn btn-primary" onclick="openEligibilityCheck('monthly')" id="cta-monthly-hero">Protect my roof — $108/month</button>
       </div>
@@ -1184,7 +1192,7 @@
   <div class="container">
     <div class="trust-strip-inner">
       <!-- P0 #2: confirmed 5.0 ★ 174 Google reviews -->
-      <a class="trust-item-google" href="https://www.google.com/search?q=jsj+roofing+alexandria#" target="_blank" rel="noopener" aria-label="5.0 stars, 174 Google reviews — read our reviews"><span class="trust-stars">★★★★★</span> 5.0 · 174 Google reviews</a>
+      <a class="trust-item-google" href="https://www.google.com/maps/place/JSJ+Roofing+-+Alexandria/@-33.9084766,151.1922312,17z" target="_blank" rel="noopener" aria-label="5.0 stars, 174 Google reviews — read our reviews"><span class="trust-stars">★★★★★</span> 5.0 · 174 Google reviews</a>
       <span class="trust-sep">·</span>
       <span class="trust-item">30+ years</span>
       <span class="trust-sep">·</span>
@@ -1205,7 +1213,7 @@
       <div class="card">
         <div class="card-number">01</div>
         <h4>Subscribe in two minutes</h4>
-        <p>Pick monthly, annual or a one-off clean. Pay securely with card. Book your first clean on a Wednesday morning — our Castle Hill route runs every week from 7am.</p>
+        <p>Check your postcode and home type, choose monthly or annual, then book your first Wednesday clean. The whole signup takes two minutes.</p>
       </div>
       <div class="card">
         <div class="card-number">02</div>
@@ -1227,8 +1235,8 @@
 <section class="pricing section">
   <div class="container">
     <div class="section-header">
-      <h2>Pick what suits you.</h2>
-      <p>12-month care plan, billed monthly. Cancel anytime after your first year — no auto-renewal surprises.</p>
+      <h2>The Castle Hill care plan</h2>
+      <p><em>12-month roof care plan, billed monthly. The one most Castle Hill homeowners start with.</em></p>
     </div>
     <div class="pricing-cards">
 
@@ -1375,13 +1383,13 @@
 <section class="reviews-section">
   <div class="container">
     <div class="reviews-header">
-      <h2>Why Castle Hill homeowners choose JSJ</h2>
+      <h2>Why Sydney homeowners trust JSJ</h2>
       <div class="reviews-trust-row">
         <span class="trust-stars" aria-label="5 stars">★★★★★</span>
         <span class="trust-count">5.0</span>
         <span style="font-size:1.1rem;color:var(--text-secondary);font-weight:400;">·</span>
         <span class="trust-count">174 Google reviews</span>
-        <a href="https://www.google.com/search?q=jsj+roofing+alexandria#" target="_blank" rel="noopener" class="trust-google-link" aria-label="Read JSJ Roofing reviews on Google">
+        <a href="https://www.google.com/maps/place/JSJ+Roofing+-+Alexandria/@-33.9084766,151.1922312,17z" target="_blank" rel="noopener" class="trust-google-link" aria-label="Read JSJ Roofing reviews on Google">
           <!-- Google G logo -->
           <svg class="g-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
           Read our reviews
@@ -1702,7 +1710,7 @@
       <div class="pillar">
         <div class="pillar-icon">★★★★★</div>
         <h4>174 Google reviews</h4>
-        <p>5.0 stars from 174 verified customers. <a href="https://www.google.com/search?q=jsj+roofing+alexandria#" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline;">Read our reviews →</a></p>
+        <p>5.0 stars from 174 verified customers. <a href="https://www.google.com/maps/place/JSJ+Roofing+-+Alexandria/@-33.9084766,151.1922312,17z" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline;">Read our reviews →</a></p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">30+</div>
@@ -1733,11 +1741,6 @@
         <div class="g-icon">2yr</div>
         <h4>2-year workmanship warranty</h4>
         <p>All gutter cleaning and non-structural repair work is covered for 2 years from the date of service. If a defect in our workmanship appears, we'll return and fix it at no charge.</p>
-      </div>
-      <div class="guarantee-card">
-        <div class="g-icon">✗</div>
-        <h4>What's not covered</h4>
-        <p>Storm or hail damage, natural wear and tear, and damage caused by other trades on the roof after our visit are excluded. Full exclusions in our warranty terms.</p>
       </div>
       <div class="guarantee-card">
         <div class="g-icon">✉</div>
@@ -1802,14 +1805,14 @@
       <details>
         <summary>Why a subscription instead of just calling when I need it?</summary>
         <div class="faq-answer-body">
-          Honestly? Because it stops being your problem. The data on home maintenance is depressing: most people forget about gutters until water's coming down a wall. Two cleans a year on autopilot prevents 90% of avoidable roof damage, and an annual inspection catches the rest before it costs five figures.
+          Because it stops being your problem. Most people forget about gutters until water's coming down a wall. Two cleans a year on autopilot prevents the most common causes of roof damage, and the annual inspection catches small issues before they become expensive ones.
         </div>
       </details>
 
       <details>
         <summary>Can I cancel?</summary>
         <div class="faq-answer-body">
-          Yes. The monthly plan has a 12-month minimum, then you can cancel anytime through your account. The annual plan is non-refundable after the first service, but it doesn't auto-renew without your say-so. We're not interested in trapping people who don't want to be here.
+          Yes. The monthly plan has a 12-month minimum, then you can cancel anytime through your account. The annual plan is non-refundable after the first service, but it doesn’t auto-renew without your say-so. No surprise auto-renewals, no cancellation fees.
         </div>
       </details>
 
@@ -1845,6 +1848,13 @@
         <summary>What's your address and how do I check you're real?</summary>
         <div class="faq-answer-body">
           JSJ Roofing trades as SBMN Operating Pty Ltd, ABN 26 667 426 593. NSW Roofing Licence #451327C — you can verify this at the NSW Fair Trading licence-check website. Offices in Riverstone and Alexandria. Real humans you can call: <a href="tel:0290904863">(02) 9090 4863</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>What's not covered by the plan?</summary>
+        <div class="faq-answer-body">
+          The plan covers gutter cleaning and roof inspection. It does not cover: storm or hail damage, natural wear and tear, damage caused by other trades on the roof after our visit, repairs to gutters, tiles, or flashings (though you get 10% off if you choose us), or second properties. Full exclusions are in our <a href="warranty.html">Warranty Terms</a>.
         </div>
       </details>
 
@@ -1912,10 +1922,9 @@
 <!-- ================================================================ -->
 <div class="sticky-cta-bar" id="sticky-cta" aria-hidden="true">
   <div class="sticky-cta-label">
-    <strong>Hills Roof Care</strong>
-    $108/month · Castle Hill care plan
+    <strong>Castle Hill care plan</strong>
   </div>
-  <button class="btn btn-primary" onclick="openEligibilityCheck('monthly')">Reserve my spot</button>
+  <button class="btn btn-primary" onclick="openEligibilityCheck('monthly')">Protect my roof — $108/month</button>
 </div>
 
 <!-- ================================================================ -->
@@ -1966,10 +1975,12 @@
         <div class="plan-name" id="confirm-plan-name">Monthly care plan</div>
         <div class="plan-price" id="confirm-plan-price">$108<span class="plan-freq">/month</span></div>
       </div>
+      <p class="modal-post-payment">After payment, we’ll email your booking link straight away — you’ll lock in your first Wednesday morning slot before you close the tab.</p>
       <div class="modal-actions">
-        <button class="btn btn-primary" id="modal-pay-btn" onclick="onConfirmPay()">Reserve my spot &amp; protect my roof</button>
+        <button class="btn btn-primary" id="modal-pay-btn" onclick="onConfirmPay()">Protect my roof</button>
         <button class="btn-link-dark" onclick="goBackToStep1()">&#8592; Change my answers</button>
       </div>
+      <p class="modal-email-exit">Not ready yet? <a href="mailto:info@jsjroofing.com.au?subject=Interested%20in%20Hills%20Roof%20Care&body=Hi%2C%20I%27m%20interested%20in%20Hills%20Roof%20Care%20for%20Castle%20Hill.%20Please%20send%20me%20the%20details.">Send me the details by email →</a></p>
     </div>
   </div>
 </div>
