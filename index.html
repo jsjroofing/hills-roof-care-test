@@ -2161,22 +2161,40 @@
   function loadCalEmbed() {
     if (calLoaded) return;
     calLoaded = true;
+
+    /* ── Cal.com inline embed — script.onload approach ─────────────────
+       Cal("ns:namespace", "inline", {...}) queues the command in the
+       GLOBAL queue where the global instance has no "ns:..." handler,
+       so it is silently dropped. Instead we load embed.js manually,
+       wait for it to finish, then call the namespace API directly. */
+    const calScript = document.createElement('script');
+    calScript.src = 'https://app.cal.com/embed/embed.js';
+    calScript.async = true;
+
+    // Initialise the stub so the namespace exists before embed.js runs
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
       let d = C.document;
-      C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "hillsroofcaretest", { origin: "https://app.cal.com" });
-    Cal("ns:hillsroofcaretest", "inline", {
-      elementOrSelector: "#cal-booking-embed",
-      calLink: "team/jsj-roofing/hillsroofcaretest",
-      layout: "month_view"
-    });
-    Cal("ui", "hillsroofcaretest", {
-      styles: { branding: { brandColor: "#a2c354" } },
-      hideEventTypeDetails: false,
-      layout: "month_view"
-    });
+      C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === 'string') { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ['initNamespace', namespace]); } else p(cal, ar); return; } p(cal, ar); };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    Cal('init', 'hillsroofcaretest', { origin: 'https://app.cal.com' });
+
+    calScript.onload = function () {
+      // embed.js has fully loaded — call inline directly on the namespace API
+      Cal.ns['hillsroofcaretest']('inline', {
+        elementOrSelector: '#cal-booking-embed',
+        calLink: 'team/jsj-roofing/hillsroofcaretest',
+        layout: 'month_view'
+      });
+      Cal.ns['hillsroofcaretest']('ui', {
+        styles: { branding: { brandColor: '#a2c354' } },
+        hideEventTypeDetails: false,
+        layout: 'month_view'
+      });
+    };
+
+    document.head.appendChild(calScript);
   }
 </script>
 
