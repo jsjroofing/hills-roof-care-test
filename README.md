@@ -46,7 +46,7 @@ Payments use direct Stripe Payment Link redirects (no server required). Each CTA
 |---------|------|----------------|
 | Monthly Plan ($108/month) | Subscription | `price_1TaA2qS44JwkysgbAKS2NUej` |
 | Annual Plan ($1,199/year) | Subscription | `price_1TaA48S44JwkysgbnzvPf701` |
-| Single Clean ($400) | One-off payment | `price_1TaA1jS44JwkysgbYmaTsmBg` |
+| Single Clean ($500) | One-off payment | `price_1TaA1jS44JwkysgbYmaTsmBg` |
 
 **Stripe branding** (Dashboard → Settings → Branding):
 - Primary colour: `#a2c354`

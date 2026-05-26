@@ -39,7 +39,6 @@
 
   <!-- Theme colour, favicons -->
   <meta name="theme-color" content="#082b51">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -122,6 +121,7 @@
       font-size: 16px;
       font-weight: 600;
       padding: 14px 32px;
+      min-height: 44px;
       border-radius: 6px;
       border: none;
       cursor: pointer;
@@ -1298,7 +1298,7 @@
           <li>We arrive when we say we will</li>
           <li>Photos before &amp; after</li>
         </ul>
-        <button class="btn btn-outline-dark" onclick="openStripeCheckout('single')" id="cta-single-pricing">Book a single clean</button>
+        <button class="btn btn-outline-dark" onclick="openStripeCheckout('single')" id="cta-single-pricing" aria-label="Book a single gutter clean for $500">Book a single clean</button>
       </div>
 
     </div>

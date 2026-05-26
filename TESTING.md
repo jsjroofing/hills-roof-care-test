@@ -18,13 +18,12 @@
 
 ## Workflow for any change
 
-1. Make changes in the `hills-roof-care` repo on a feature branch
-2. Merge the feature branch into `hills-roof-care-test` (copy changes manually or via patch)
-3. Run the full test harness (`test-harness.md`) against the test environment
-4. Use Stripe test card `4242 4242 4242 4242` to verify all three payment flows
-5. If all checks pass → merge the feature branch into `hills-roof-care` `main` (auto-deploys to production)
-6. Re-run smoke tests against production
-7. Tag the release with a date stamp
+1. Make changes and validate them in the `hills-roof-care-test` repo first
+2. Run the current Word test plan: `hills-roof-care-test-plan-CODEX-CURRENT-2026-05-26.docx`
+3. Use Stripe test card `4242 4242 4242 4242` to verify the test payment flows where dashboard access is available
+4. If the test environment passes → copy the verified change to `hills-roof-care` `main` (auto-deploys to production)
+5. Ben runs the production live smoke test himself
+6. Tag the release with a date stamp
 
 ---
 
@@ -44,7 +43,7 @@ Use any future expiry date, any 3-digit CVC, and any postcode.
 
 ## Test email address
 
-Use `bentindale+hillstest@gmail.com` for all test signups. This keeps test receipts, confirmations, and Cal.com booking notifications isolated from real correspondence.
+Use `ben@jsjroofing.com.au` for all test signups. This keeps test receipts, confirmations, and Cal.com booking notifications routed to Ben's campaign test inbox.
 
 ---
 
@@ -66,8 +65,8 @@ After each test booking, cancel it immediately so it does not appear on Emily's 
 - Never merge a branch containing test Stripe URLs (`buy.stripe.com/test_...`) into the production repo
 - Never push directly to the production `main` branch — always go via test first
 - Never delete or modify the test products in Stripe — keep them stable so tests are repeatable
-- Never use real customer email addresses for test signups — use `bentindale+hillstest@gmail.com`
-- Never test live (production) Payment Links unless intentionally doing a real-money smoke test with Ben present
+- Never use real customer email addresses for test signups — use `ben@jsjroofing.com.au`
+- Codex must never run live production Payment Links or real-money smoke tests; Ben runs those himself
 
 ---
 
